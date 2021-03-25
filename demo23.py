@@ -20,7 +20,7 @@ y = np.linspace(-a, a, 100)
 [X, Y] = np.meshgrid(x, y)
 r, theta = car2pol(X, Y)
 # %%
-U = 5.100  # * thansverse propagation constant of fiber core
+U = 5.320  # * thansverse propagation constant of fiber core
 l = 3  # * order
 E = sp.special.jv(l, U*r/a)/sp.special.jv(l, U)*np.cos(l*theta)
 I = E**2
