@@ -20,10 +20,9 @@ y = np.linspace(-a, a, 100)
 [X, Y] = np.meshgrid(x, y)
 r, theta = car2pol(X, Y)
 # %%
-U = 3.823  # * thansverse propagation constant of fiber core
-l = 5  # * order
-w = 2  # * width of the light spot
-E = sp.special.jv(l, w*U*r/a)/sp.special.jv(l, U)*np.cos(l*theta)
+U = 5.100  # * thansverse propagation constant of fiber core
+l = 3  # * order
+E = sp.special.jv(l, U*r/a)/sp.special.jv(l, U)*np.cos(l*theta)
 I = E**2
 plt.imshow(I)
 # %%
